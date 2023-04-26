@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.menu-icon {
+  margin: 20px auto;
+  width: 20px;
+  height: 14px;
+  cursor: pointer;
+  position: relative;
+}
+.menu-icon span {
+  background-color: black;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+.menu-icon span:first-child {
+  position: absolute;
+  top: 0;
+}
+.menu-icon span:nth-child(2) {
+  position: absolute;
+  top: 6px;
+}
+.menu-icon span:last-child {
+  position: absolute;
+  top: 12px;
+}
+.menu-icon:hover span:nth-child(2) {
+  opacity: 0;
+}
+.menu-icon:hover span:first-child,
+.menu-icon:hover span:last-child {
+  top: 6px;
+  background-color: red;
+}
+.menu-icon:hover span:first-child {
+  transform: rotate(45deg);
+}
+.menu-icon:hover span:last-child {
+  transform: rotate(-45deg);
+}
